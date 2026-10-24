@@ -10,4 +10,9 @@ def solve(a):
             if solve(a): return a
             del a[r]
 print(solve({}))
-# Output: {'A':'Red','B':'Green','C':'Blue','D':'Red'}
+# Output:
+# Map Coloring Solution
+# A = Red
+# B = Green
+# C = Blue
+# D = Red
