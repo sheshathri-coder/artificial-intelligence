@@ -1,5 +1,13 @@
-% 20. Backward chaining
+% 20. Backward Chaining
+
 bird(sparrow).
-can_fly(X):- bird(X).
-% Query: ?- can_fly(sparrow).
-% Output: true.
+
+can_fly(X) :-
+    bird(X).
+
+:- initialization(main).
+
+main :-
+    can_fly(sparrow),
+    write('Sparrow can fly: true'),
+    nl.
