@@ -1,6 +1,13 @@
-% 14. Diet based on disease
-diet(diabetes,'low sugar diet').
-diet(hypertension,'low salt diet').
-diet(anemia,'iron rich diet').
-% Query: ?- diet(diabetes,D).
-% Output: D = 'low sugar diet'.
+% 14. Diet Based on Disease
+
+recommend_diet(diabetes, 'low sugar diet').
+recommend_diet(hypertension, 'low salt diet').
+recommend_diet(anemia, 'iron rich diet').
+
+:- initialization(main).
+
+main :-
+    recommend_diet(diabetes, Diet),
+    write('Recommended diet for diabetes: '),
+    write(Diet),
+    nl.
