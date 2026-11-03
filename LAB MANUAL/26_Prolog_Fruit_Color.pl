@@ -1,7 +1,13 @@
-% 16. Fruit color using backtracking
-fruit(apple,red). fruit(banana,yellow). fruit(grape,green).
-% Query: ?- fruit(F,C).
-% Output:
-% F = apple, C = red ;
-% F = banana, C = yellow ;
-% F = grape, C = green.
+% 16. Fruit and Color
+
+fruit(apple, red).
+fruit(banana, yellow).
+fruit(grape, green).
+
+:- initialization(main).
+
+main :-
+    fruit(apple, Color),
+    write('Color of apple: '),
+    write(Color),
+    nl.
