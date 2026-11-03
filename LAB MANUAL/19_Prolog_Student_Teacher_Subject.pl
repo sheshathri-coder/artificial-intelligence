@@ -1,8 +1,15 @@
-% 9. Student, teacher and subject database
+% 9. Student, Teacher and Subject Database
+
 student(arun).
 teacher(ravi).
 subject(ai).
-teaches(ravi,ai).
-studies(arun,ai).
-% Query: ?- studies(X,ai).
-% Output: X = arun.
+teaches(ravi, ai).
+studies(arun, ai).
+
+:- initialization(main).
+
+main :-
+    studies(Student, ai),
+    write('Student studying AI: '),
+    write(Student),
+    nl.
