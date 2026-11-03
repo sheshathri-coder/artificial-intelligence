@@ -1,5 +1,14 @@
-% 13. Family tree
-parent(ravi,arun). parent(arun,kiran).
-father(X,Y):- parent(X,Y).
-% Query: ?- father(ravi,arun).
-% Output: true.
+% 13. Simple Family Tree
+
+parent(ravi, arun).
+parent(arun, kiran).
+
+father(X, Y) :-
+    parent(X, Y).
+
+:- initialization(main).
+
+main :-
+    father(ravi, arun),
+    write('Ravi is the father of Arun: true'),
+    nl.
